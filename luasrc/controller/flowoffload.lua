@@ -8,6 +8,7 @@ function index()
 	page = entry({"admin", "network", "flowoffload"}, cbi("flowoffload"), _("Turbo ACC Center"), 101)
 	page.i18n = "flowoffload"
 	page.dependent = true
+	page.acl_depends = { "luci-app-flowoffload" }
 	
 	entry({"admin", "network", "flowoffload", "status"}, call("action_status"))
 end
